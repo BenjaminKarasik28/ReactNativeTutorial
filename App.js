@@ -10,8 +10,6 @@ import React, {Component} from 'react';
 import {Button, Text, StyleSheet, TextInput, View} from 'react-native';
 import ListItem from './src/components/ListItem/ListItem';
 
-
-
 export default class App extends Component {
 
   state={
