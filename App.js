@@ -33,7 +33,8 @@ export default class App extends Component {
     //I guess it outputs a string of places?
     this.setState(prevState=>{
       return{
-        places: prevState.places.concat(prevState.placeName)
+        places: prevState.places.concat(prevState.placeName),
+        placeName: ""
 
       };
     })
