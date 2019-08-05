@@ -7,7 +7,9 @@
     "test": "jest",
     "lint": "eslint .",
     "ios": "react-native run-ios",
-    "android":"react-native run-android"
+    "android": "react-native run-android",
+    "AVD": "/Users/christophergriffith/Library/Android/sdk/emulator/emulator -avd Pixel_3_API_29 -netdelay none -netspeed full",
+    "both": "react-native run-ios && react-native run-android"
   },
   "dependencies": {
     "react": "16.8.6",
