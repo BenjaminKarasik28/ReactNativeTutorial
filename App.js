@@ -13,6 +13,7 @@ import PlaceInput from './src/components/PlaceInput/PlaceInput';
 import PlaceList from './src/components/PlaceList/PlaceList';
 
 
+//root class with its own state of places array
 
 export default class App extends Component {
 
@@ -20,7 +21,13 @@ export default class App extends Component {
     
     places: []
   }
-
+  /*
+  function that recives a placeName (this.state.placeName from ListItem.js) as an arg.
+  Callback function that sets the state and sends the previous state as the argument
+  Pevious state is actually the state before the current onclick/onchangetext occurs, think of it as current state
+  Returns the places array with the current array (PrevState.places) plus (concat) placeName 
+  We send this function as a prop when calling PlaceInput component
+   */
   placeAddedHandler = placeName =>{
     this.setState(PrevState => {
       return{

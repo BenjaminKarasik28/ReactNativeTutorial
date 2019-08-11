@@ -2,18 +2,30 @@ import React, {Component} from 'react';
 
 import {View, Button, TextInput, StyleSheet} from 'react-native';
 
+//class based component with its own state 
 
 class PlaceInput extends Component{
     state={
         placeName: '',
         
       }
+      /*
+      called when onChangeText is triggered
+      updates the state with the value you write
+      placeName here and placeName in state have to match
+      */ 
       placeNameChangedHandlder = val =>{
           this.setState({
             placeName: val 
           });
         }
-      
+      /*
+      called when button is pressed (onPress is called)
+      intially checks if what you enetered is null and if it is, won't do anything.
+      else, calls onPlaceAdded and sends the state's placeName as an argument.
+      onPlaceAdded is a function written in App.js which is the prop it sends to PlaceInput.
+      We're calling a function that is a prop and sending that function a state property from this component
+      */ 
         placeSubmitHandler = () =>{
           if(this.state.placeName.trim()===""){
             return;
